@@ -9,19 +9,10 @@ local function HttpSpyCallback()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Httpspy/main/httpspy.txt"))()
 end
 
--- Script Viewer Callback
-local function 
+-- GUI Stealer Callback
+local function ScriptViewerCallback()
 
-ScriptViewerCallback()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DrugScripts/Crackingtools/main/scriptviewer.lua"))()
 end
---Home Key--
-local function 
-
-HomeKeyCallback()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DrugScripts/Crackingtools/main/Key.lua"))()
-end
-
 
 -- SimpleSpy Callback
 local function SimpleSpyCallback()
@@ -39,8 +30,8 @@ local function DexPCCallback()
 end
 
 -- IY Callback
-local function IYCallback()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+local function NameBypassCallback()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrugScripts/Bypass/main/NameBypass"))()
 end
 
 -- Debuggers Callback
@@ -57,11 +48,10 @@ end
 local tab1 = Main:CreateTab("Tools")
 
 tab1:CreateButton("Httpspy", HttpSpyCallback)
-tab1:CreateButton("Script Viewer", ScriptViewerCallback)
-tab1:CreateButton("Home Key", HomeKeyCallback)
+tab1:CreateButton("GUI Stealer", GuiStealerCallback) -- Add the actual callback function for GUI Stealer
 tab1:CreateButton("SimpleSpy", SimpleSpyCallback)
 tab1:CreateButton("Dex Mobile", DexMobileCallback)
 tab1:CreateButton("Dex PC", DexPCCallback)
-tab1:CreateButton("IY", IYCallback)
+tab1:CreateButton("NameBypass", NameBypassCallback)
 tab1:CreateButton("Debuggers", DebuggersCallback)
 tab1:CreateButton("Hub", HubCallback)
