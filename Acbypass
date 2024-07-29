@@ -1,0 +1,14 @@
+local RS = game:GetService("ReplicatedStorage")
+function IN(str)
+    return tonumber(str) ~= nil
+end
+function dnr(folder)
+    for _, sexychild in pairs(folder:GetChildren()) do
+        if sexychild:IsA("RemoteFunction") and IN(sexychild.Name) then
+            sexychild:Destroy()
+        elseif sexychild:IsA("Folder") or sexychild:IsA("Model") then
+            dnr(sexychild)
+        end
+    end
+end
+dnr(RS)
